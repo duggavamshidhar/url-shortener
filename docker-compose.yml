@@ -1,0 +1,12 @@
+name: URL Shortener
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '${PORT}:${PORT}'
+    environment:
+      - PORT=${PORT}
+    restart: unless-stopped
